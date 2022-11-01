@@ -1,0 +1,426 @@
+/* ==========================================
+   FINAL.CSS
+   These are the final styles for the project.
+
+   Course:  CSS3 in 30 Days
+   Author:  Brad Hussey
+   Website: codecollege.ca
+   ========================================== */
+
+button {
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 0 15px 0 0;
+}
+
+
+/* =====================
+   FACEBOOK STYLE BUTTON
+   ===================== */
+
+.final__facebook-style-btn {
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+}
+
+.final__facebook-style-dark {
+  -moz-box-shadow:    inset 0px 1px 0px 0px #4d73bf;
+  -webkit-box-shadow: inset 0px 1px 0px 0px #4d73bf;
+  box-shadow:         inset 0px 1px 0px 0px #4d73bf;
+  background: #4267b2;
+  border: 1px solid #4267b2;
+  color: #fff;
+  text-shadow: 0 1px 0px #3359a5;
+}
+
+  .final__facebook-style-dark:hover {
+    background: #2b54a7;
+  }
+
+  .final__facebook-style-dark:active {
+    background: #1d4698;
+    border-color: #1d4698;
+  }
+
+
+.final__facebook-style-light {
+  background: #f6f7f9;
+  border: 1px solid #ced0d4;
+  border-radius: 2px;
+  color: #4b4f56;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+}
+
+  .final__facebook-style-light:hover {
+    background: #e9ebee;
+  }
+
+  .final__facebook-style-light:active {
+    background: #d8dade;
+    border-color: #d8dade;
+  }
+
+
+/* =====================
+   3D BUTTON 1
+   ===================== */
+
+.final__btn-3d-1 {
+  position: relative;
+  background: orangered;
+  border: none;
+  color: white;
+  padding: 15px 24px;
+  font-size: 1.4rem;
+  box-shadow: -6px 6px 0 hsl(16, 100%, 30%);
+  outline: none;
+}
+
+  .final__btn-3d-1:hover {
+    background: hsl(16, 100%, 45%);
+  }
+
+  .final__btn-3d-1:active {
+    background: hsl(16, 100%, 40%);
+    top: 3px;
+    left: -3px;
+    box-shadow: -3px 3px 0 hsl(16, 100%, 30%);
+  }
+
+  .final__btn-3d-1::before {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 0;
+    width: 0;
+    /* border width needs to be size of the element's box shadow */
+    border: solid 6px transparent;
+
+    /* border width needs to be size of the element's box shadow */
+    border-right: solid 6px hsl(16, 100%, 30%);
+
+    /* no width for left, makes measurements easier */
+    border-left-width: 0px;
+
+    background: none;
+    top: 0px;
+
+    /* needs to be the same size as border width */
+    left: -6px;
+  }
+
+  .final__btn-3d-1::after {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 0;
+    width: 0;
+    border: solid 6px transparent;
+    border-top: solid 6px hsl(16, 100%, 30%);
+    border-bottom-width: 0px;
+    background: none;
+    right: 0;
+    bottom: -6px;
+  }
+
+    .final__btn-3d-1:active::before {
+      border: solid 3px transparent;
+      border-right: solid 3px hsl(16, 100%, 30%);
+      border-left-width: 0px;
+      left: -3px;
+    }
+
+    .final__btn-3d-1:active::after {
+      border: solid 3px transparent;
+      border-top: solid 3px hsl(16, 100%, 30%);
+      border-bottom-width: 0px;
+      bottom: -3px;
+    }
+
+
+/* =====================
+   3D BUTTON 2
+   ===================== */
+
+.final__btn-3d-2 {
+  position: relative;
+
+  background: #ecd300; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(hsl(54, 100%, 50%), hsl(54, 100%, 40%)); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(hsl(54, 100%, 50%), hsl(54, 100%, 40%)); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(hsl(54, 100%, 50%), hsl(54, 100%, 40%)); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(hsl(54, 100%, 50%), hsl(54, 100%, 40%)); /* Standard syntax */
+
+  font-size: 1.4rem;
+  text-shadow: 0 -1px 0 #c3af07;
+  color: white;
+  border: solid 1px hsl(54, 100%, 20%);
+  border-radius: 100%;
+  height: 120px;
+  width: 120px;
+  z-index: 4;
+
+  outline: none;
+
+  box-shadow: inset 0 1px 0 hsl(54, 100%, 50%),
+              0 2px 0 hsl(54, 100%, 20%),
+              0 3px 0 hsl(54, 100%, 18%),
+              0 4px 0 hsl(54, 100%, 16%),
+              0 5px 0 hsl(54, 100%, 14%),
+              0 6px 0 hsl(54, 100%, 12%),
+              0 7px 0 hsl(54, 100%, 10%),
+              0 8px 0 hsl(54, 100%, 8%),
+              0 9px 0 hsl(54, 100%, 6%);
+}
+
+  .final__btn-3d-2:hover {
+    background: #ecd300; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(hsl(54, 100%, 45%), hsl(54, 100%, 35%)); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(hsl(54, 100%, 45%), hsl(54, 100%, 35%)); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(hsl(54, 100%, 45%), hsl(54, 100%, 35%)); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(hsl(54, 100%, 45%), hsl(54, 100%, 35%)); /* Standard syntax */
+  }
+
+  .final__btn-3d-2:active {
+    background: #ecd300; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(hsl(54, 100%, 43%), hsl(54, 100%, 33%)); /* Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(hsl(54, 100%, 43%), hsl(54, 100%, 33%)); /* For Opera 11.6 to 12.0 */
+    background: -moz-radial-gradient(hsl(54, 100%, 43%), hsl(54, 100%, 33%)); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(hsl(54, 100%, 43%), hsl(54, 100%, 33%)); /* Standard syntax */
+
+    top: 2px;
+
+    box-shadow: inset 0 1px 0 hsl(54, 100%, 50%),
+                0 2px 0 hsl(54, 100%, 20%),
+                0 3px 0 hsl(54, 100%, 18%),
+                0 4px 0 hsl(54, 100%, 16%),
+                0 5px 0 hsl(54, 100%, 14%),
+                0 6px 0 hsl(54, 100%, 12%),
+                0 7px 0 hsl(54, 100%, 10%);
+  }
+
+
+/* =========================
+   GRADIENT BORDERED BUTTONS
+   ========================= */
+
+   .final__gradient-button-1 {
+     position: relative;
+     z-index: 1;
+     display: inline-block;
+     padding: 20px 40px;
+     font-size: 1.4rem;
+     box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+     background-color: #e7eef1;
+     border: 10px solid transparent;
+     border-image: linear-gradient(to top right, orangered, yellow);
+     border-image-slice: 1;
+     color: orangered;
+     outline: none;
+     -webkit-transition: all 0.3s ease;
+     transition: all 0.3s ease;
+   }
+   .final__gradient-button-1:hover {
+     background-size: 100%;
+     background-image: linear-gradient(to top right, orangered, yellow);
+     color: white;
+   }
+
+
+   .final__gradient-button-2 {
+     position: relative;
+     z-index: 1;
+     display: inline-block;
+     padding: 20px 40px;
+     font-size: 1.4rem;
+     box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+     background-color: #e7eef1;
+     border: 4px solid transparent;
+     border-image: linear-gradient(to right, orangered, transparent);
+     border-image-slice: 1;
+     color: orangered;
+     outline: none;
+     -webkit-transition: all 0.3s ease;
+     transition: all 0.3s ease;
+   }
+   .final__gradient-button-2:hover {
+     background-size: 100%;
+     background-image: linear-gradient(to right, orangered, transparent);
+     border-right-style: none;
+     color: white;
+   }
+
+
+
+/* =========================
+   ANIMATED BUTTONS
+   ========================= */
+
+   .final__animated-button-1 {
+     position: relative;
+     display: inline-block;
+     padding: 20px 40px;
+     font-size: 1.4rem;
+     background-color: #00b3b4;
+
+     background-image: url(pattern.png);
+     background-size: 40px 40px;
+     border: 1px solid #555;
+     color: white;
+     transition: all 0.3s ease;
+   }
+   .final__animated-button-1:hover {
+     -webkit-animation: loading-button-animation 2s linear infinite;
+             animation: loading-button-animation 2s linear infinite;
+   }
+
+
+   .final__animated-button-2 {
+     position: relative;
+     display: inline-block;
+     padding: 20px 40px;
+     font-size: 1.4rem;
+     background-color: #00b3b4;
+     background-size: 20px 20px;
+     border: 1px solid #555;
+     color: white;
+     transition: all 0.3s ease;
+   }
+   .final__animated-button-2:after {
+     position: absolute;
+     top: 50%;
+     right: 0.6em;
+     -webkit-transform: translate(0, -50%);
+             transform: translate(0, -50%);
+     content: "»";
+     opacity: 0;
+     transition: all 0.3s ease;
+   }
+   .final__animated-button-2:hover {
+     padding: 20px 60px 20px 20px;
+   }
+   .final__animated-button-2:hover:after {
+     right: 1.2em;
+     opacity: 1;
+   }
+
+   @-webkit-keyframes loading-button-animation {
+     from {
+       background-position: 0 0;
+     }
+     to {
+       background-position: 40px 0;
+     }
+   }
+
+   @keyframes loading-button-animation {
+     from {
+       background-position: 0 0;
+     }
+     to {
+       background-position: 40px 0;
+     }
+   }
+
+
+
+/* =========================
+   TOGGLE SWITCH UI BUTTONS
+   ========================= */
+
+   .final__toggle-1 {
+     font-family: Helvetica, Arial, sans-serif;
+     display: inline-block;
+     vertical-align: top;
+     margin: 0 15px 0 0;
+   }
+   .final__toggle-1__input {
+     display: none;
+   }
+   .final__toggle-1__button {
+     position: relative;
+     display: inline-block;
+     font-size: 14px;
+     line-height: 20px;
+     text-transform: uppercase;
+     background-color: #f2395a;
+     border:1px solid #f2395a;
+     color: #ffffff;
+     width: 80px;
+     height: 30px;
+     transition: all 0.3s ease;
+     cursor: pointer;
+   }
+   .final__toggle-1__button:before {
+     position: absolute;
+     top: 6px;
+     left: 40px;
+     right: auto;
+     display: inline-block;
+     height: 20px;
+     padding: 0 3px;
+     background-color: #ffffff;
+     color: #f2395a;
+     content: "off";
+     transition: all 0.3s ease;
+   }
+   .final__toggle-1__input:checked + .final__toggle-1__button {
+     background-color: #00b3b4;
+     border:1px solid #00b3b4;
+   }
+   .final__toggle-1__input:checked + .final__toggle-1__button:before {
+     left: 5px;
+     content: "on";
+     color: #00b3b4;
+   }
+
+
+   .final__toggle-2 {
+     font-family: Helvetica, Arial, sans-serif;
+     font-size: 1rem;
+     display: inline-block;
+     vertical-align: top;
+     margin: 0 15px 0 0;
+   }
+   .final__toggle-2__input {
+     display: none;
+   }
+   .final__toggle-2__button {
+     position: relative;
+     display: inline-block;
+     line-height: 20px;
+     text-transform: uppercase;
+     background-color: #ffffff;
+     color: #aaaaaa;
+     border: 1px solid #cccccc;
+     padding: 5px 10px 5px 30px;
+     transition: all 0.3s ease;
+     cursor: pointer;
+   }
+   .final__toggle-2__button:before {
+     position: absolute;
+     top: 10px;
+     left: 10px;
+     right: auto;
+     display: inline-block;
+     width: 10px;
+     height: 10px;
+     background-color: #cccccc;
+     content: "";
+     transition: all 0.3s ease;
+   }
+   .final__toggle-2__input:checked + .final__toggle-2__button {
+     background-color: #00b3b4;
+     border-color: #00b3b4;
+     color: #ffffff;
+   }
+   .final__toggle-2__input:checked + .final__toggle-2__button:before {
+     background-color: #ffffff;
+   }
