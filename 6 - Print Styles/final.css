@@ -1,0 +1,95 @@
+/* ==========================================
+   FINAL.CSS
+   These are the final styles for the project.
+
+   Course:  CSS3 in 30 Days
+   Author:  Brad Hussey
+   Website: codecollege.ca
+   ========================================== */
+
+
+   @media print {
+
+     /* HIDE UNWANTED ELEMENTS */
+     body::before,
+     .course-files,
+     #logo,
+     .final-result::before,
+     .info::before,
+     .final-result::after,
+     .info::after,
+     .final-result h2,
+     .info h2,
+     img {
+       display: none;
+     }
+
+     /* GLOBAL RESET */
+     body {
+       font-family: Georgia, serif;
+       font-size: 16pt;
+       line-height: 24pt;
+       background: none;
+       color: #000;
+     }
+
+
+     /* LAYOUT RESET */
+     .final-result,
+     .info,
+     section,
+     footer {
+       background: none;
+       width: 100%;
+       border: none;
+       padding: 0;
+       margin: 0;
+       color: #000;
+     }
+
+     section:first-child::before {
+       border: none;
+     }
+
+     /* SPECIFICS */
+     h1,h2,h3,h4,h5,h6 {
+       color: #000;
+       font-size: 24pt;
+       line-height: 30pt;
+       margin: 0;
+     }
+
+     h1 {
+       font-size: 50pt;
+       margin: 0 0 20pt;
+       text-align: center;
+       width: 100%;
+       transform: rotate(0);
+     }
+
+     h1 small {
+       font-size: 24pt;
+       color: #000;
+       margin: 0 0 10pt;
+     }
+
+     .info p {
+       color: #000;
+     }
+
+     a:link {
+       margin: 0;
+     }
+
+     a::after {
+       content: " [" attr(href) "]";
+     }
+
+     footer a:link,
+     footer a:visited {
+       color: #000;
+       background: none;
+       padding: 0;
+     }
+
+   }
