@@ -1,0 +1,142 @@
+/* ==========================================
+   FINAL.CSS
+   These are the final styles for the project.
+
+   Course:  CSS3 in 30 Days
+   Author:  Brad Hussey
+   Website: codecollege.ca
+   ========================================== */
+
+
+/* =========================
+   MODERN LAYOUT #1
+   ========================= */
+
+.final__layout1 article {
+  width: 58%;
+  float: left;
+}
+
+.final__layout1 aside {
+  width: 40%;
+  float: right;
+}
+
+.final__layout1 footer {
+  clear: both;
+}
+
+
+/* =========================
+   MODERN LAYOUT #2
+   ========================= */
+
+.final__layout2 header .logo {
+  width: 20%;
+  float: left;
+  margin: 0;
+}
+
+.final__layout2 header nav {
+  width: 78%;
+  float: right;
+  margin: 0;
+}
+
+/* simple clearfix to prevent collapse */
+.final__layout2 header::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.final__layout2 article {
+  width: 50%;
+  margin-left: 2%;
+  float: left;
+}
+
+.final__layout2 aside.sidenav {
+  width: 23%;
+  float: left;
+}
+
+.final__layout2 aside.sidebar {
+  width: 23%;
+  float: right;
+}
+
+.final__layout2 footer {
+  clear: both;
+}
+
+
+/* =========================
+   MODERN LAYOUT #3
+   ========================= */
+
+.final__layout3 header .logo {
+  width: 20%;
+  float: right;
+  margin: 0;
+}
+
+.final__layout3 header nav {
+  width: 78%;
+  float: left;
+  margin: 0;
+}
+
+/* simple clearfix to prevent collapse */
+.final__layout3 header::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.final__layout3 article {
+  width: 32%;
+  float: left;
+  margin: 0 2% 0 0;
+}
+
+  /* clear margin of last article to allow it to fit within layout */
+  .final__layout3 article:last-child {
+    margin: 0;
+  }
+
+/* simple clearfix to prevent collapse */
+.final__layout3 .articles::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.final__layout2 footer {
+  clear: both;
+}
+
+
+/* ============================================
+   SIMPLE MEDIA QUERIES FOR RESPONSIVE LAYOUTS
+   ============================================ */
+
+@media screen and ( max-width : 768px ) {
+
+  .final__layout1 article,
+  .final__layout1 aside,
+  .final__layout2 header .logo,
+  .final__layout2 header nav,
+  .final__layout2 article,
+  .final__layout2 aside.sidenav,
+  .final__layout2 aside.sidebar,
+  .final__layout3 article,
+  .final__layout3 aside,
+  .final__layout3 header .logo,
+  .final__layout3 header nav {
+    float: none;
+    width: 100%;
+    margin: 0 0 2%;
+  }
+
+}
