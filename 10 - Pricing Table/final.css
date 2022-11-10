@@ -1,0 +1,159 @@
+/* ==========================================
+   FINAL.CSS
+   These are the final styles for the project.
+
+   Course:  CSS3 in 30 Days
+   Author:  Brad Hussey
+   Website: codecollege.ca
+   ========================================== */
+
+
+   .final__pricing-table {
+     margin: 60px auto;
+   }
+   .final__pricing-table:after {
+     display: table;
+     content: "";
+     clear: both;
+   }
+   .final__pricing-table > div {
+     display: block;
+     float: left;
+     width: 48%;
+     min-height: 1px;
+     background-color: #ffffff;
+     color: #555555;
+   }
+   .final__pricing-table > div:not(:last-child) {
+     margin-right: 2%;
+   }
+   .final__pricing-block {
+     text-align: center;
+     border-radius: 5px;
+     overflow: hidden;
+   }
+   .final__pricing-header {
+     height: auto;
+     padding: 30px 20px 40px;
+     text-transform: uppercase;
+   }
+   .final__pricing-header .final__pricing-heading {
+     font-size: 1.4rem;
+     font-weight: 700;
+   }
+   .final__pricing-price {
+     color: #777777;
+   }
+   .final__pricing-price > span {
+     display: inline-block;
+   }
+   .final__pricing-price__currency {
+     margin-top: 10px;
+     vertical-align: top;
+     font-size: 2rem;
+     font-weight: 700;
+     line-height: 1;
+     opacity: 0.6;
+   }
+   .final__pricing-price__value {
+     font-size: 5rem;
+     font-weight: 300;
+     line-height: 1;
+   }
+   .final__pricing-price__duration {
+     margin-top: 10px;
+     vertical-align: top;
+     font-size: 1.4rem;
+     line-height: 1;
+     opacity: 0.6;
+   }
+   .final__pricing-body ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+   }
+   .final__pricing-body ul li {
+     display: block;
+     padding: 10px 20px;
+     margin:0;
+   }
+   .final__pricing-body ul li:nth-child(2n) {
+     background-color: #ffffff;
+   }
+   .final__pricing-body ul li:nth-child(2n+1) {
+     background-color: #f8f8f8;
+   }
+   .final__pricing-footer {
+     padding: 40px 0 0;
+   }
+   .final__pricing-button,
+   .final__pricing-button:link,
+   .final__pricing-button:visited {
+     display: block;
+     padding: 20px;
+     text-decoration: none;
+     text-transform: uppercase;
+     background-color: #333333;
+     color: #ffffff;
+     border-bottom: dotted 0 #00B3B4;
+   }
+   .final__pricing-popular {
+     margin-top: -20px;
+   }
+   .final__pricing-popular .final__pricing-header {
+     padding-top: 50px;
+   }
+   .final__pricing-popular .final__pricing-footer {
+     padding-top: 60px;
+   }
+   .final__pricing-popular .final__pricing-price {
+     color: #ff8888;
+   }
+   .final__pricing-popular .final__pricing-button {
+     background-color: #ff8888;
+     color:#ffffff;
+   }
+   .final__pricing-popular .final__pricing-button:hover {
+     color: #ff8888;
+     background-color:#333333;
+   }
+
+   @media screen and (max-width:1023px) {
+     .final__pricing-table {
+       margin: auto;
+     }
+     .final__pricing-table > div {
+       float: none;
+       width: 100%;
+     }
+     .final__pricing-table > div:not(:last-child) {
+       margin-right: 0;
+       margin-bottom: 20px;
+     }
+     .final__pricing-body{
+        max-width: 100%;
+        overflow: hidden;
+        overflow-x: auto;
+        white-space: nowrap;
+     }
+     .final__pricing-body ul li{
+       display: inline-block;
+       vertical-align: middle;
+     }
+     .final__pricing-body ul li:not(:first-child){
+       margin-left: -5px;
+     }
+     .final__pricing-body ul li:nth-child(2n) {
+       background-color: #e8e8e8;
+     }
+     .final__pricing-footer {
+       padding-top: 0;
+     }
+     .final__pricing-popular {
+       margin-top: 0;
+     }
+     .final__pricing-popular .final__pricing-header,
+     .final__pricing-popular .final__pricing-footer {
+       padding-top: 30px;
+     }
+   }
