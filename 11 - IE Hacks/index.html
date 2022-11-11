@@ -1,0 +1,144 @@
+<!--
+  Message from Brad:
+  Thanks for watching CSS3 in 30 Days! You're awesome.
+  Want more fun design & coding courses? Check out my website.
+
+  https://codecollege.ca
+  (it's free to start)
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Internet Explorer Hacks | Code 30 Things in 30 Days with CSS3</title>
+
+    <!-- NORMALIZE CSS -->
+    <link rel="stylesheet" href="../_theme-styles/normalize.css">
+
+    <!-- PROJECT THEME CSS -->
+    <link rel="stylesheet" href="../_theme-styles/theme.css">
+
+    <!-- FINAL PROJECT CSS (use for reference) -->
+    <link rel="stylesheet" href="final.css">
+
+    <!-- SANDBOX CSS (this is your file!) -->
+    <link rel="stylesheet" href="sandbox.css">
+
+<link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans|Nova+Mono|Roboto+Condensed" rel="stylesheet">
+  </head>
+  <body>
+    <h1><small>Day #11</small> Internet Explorer Hacks</h1>
+
+
+
+    <div class="final-result">
+        <h2>Final Result <small>Use this for reference!</small></h2>
+        <div class="content">
+
+          <section>
+
+            <h4>Conditional Comments</h4>
+
+            <!--[if IE]>
+              THIS is a conditional comment for IE 6 - 9. I've added a link to an IE specific stylesheet. Only IE will render the following stylesheet. Think of the possibilities!
+
+              <link rel="stylesheet" href="ie.css">
+            <![endif]-->
+
+            <p><strong>Instructions:</strong> Ugh, yes, Internet Explorer is still a thing. Luckily, with CSS, you can bend it to your will, or just straight up give it the Vulcan Death Grip.</p>
+
+            <p>Create some IE Conditional Comments and view the result in <a href="https://netrenderer.com/" target="_blank">Net Renderer</a> if you're viewing this from a live server. Otherwise, just take my word for it ;)</p>
+
+            <p>These are HTML comments, as you might have recognized. What you would do is place the conditional comment in the head of your HTML file, below your stylesheet reference.</p>
+
+            <p>Within the comment, you could add anything from HTML to inline CSS, or a link to an external stylesheet specifically for Internet Explorer! Only IE will recognize this comment, which means you can do anything to manipulate the CSS specfically for IE!</p>
+
+            <p><strong>For example:</strong><br>
+
+            <code>
+              &lt;head&gt;<br>
+              	&nbsp;&nbsp;&lt;link rel=&quot;stylesheet&quot; href=&quot;app.css&quot;&gt;<br>
+              	&nbsp;&nbsp;&lt;!--[if IE]&gt; &lt;link rel=&quot;stylesheet&quot; href=&quot;ie.css&quot;&gt; &lt;![endif]--&gt;<br>
+              &lt;/head&gt;
+            </code>
+
+            <h4>Here are the different types of conditional commenst you can use.</h4>
+
+            <code>
+              &lt;!--[if IE 6]&gt; Internet Explorer 6 &lt;![endif]--&gt;<br>
+              &lt;!--[if IE 7]&gt; Internet Explorer 7 &lt;![endif]--&gt;<br>
+              &lt;!--[if IE 8]&gt; Internet Explorer 8 &lt;![endif]--&gt;<br>
+              &lt;!--[if IE 9]&gt; Internet Explorer 9 &lt;![endif]--&gt;
+            </code>
+
+            <br><br>
+
+            <p>To style for a specific version of IE or lower, use the following.</p>
+            <code>
+              &lt;!--[if lte IE 6]&gt; Internet Explorer 6 or less &lt;![endif]--&gt;<br>
+              &lt;!--[if lte IE 7]&gt; Internet Explorer 7 or less &lt;![endif]--&gt;<br>
+              &lt;!--[if lte IE 8]&gt; Internet Explorer 8 or less &lt;![endif]--&gt;<br>
+              &lt;!--[if lte IE 9]&gt; Internet Explorer 9 or less &lt;![endif]--&gt;
+            </code>
+
+            <br><br>
+
+            <p>To style for a specific version of IE or higher, use the following.</p>
+            <code>
+
+              &lt;!--[if gte IE 6]&gt; Internet Explorer 6 or greater &lt;![endif]--&gt;<br>
+              &lt;!--[if gte IE 7]&gt; Internet Explorer 7 or greater &lt;![endif]--&gt;<br>
+              &lt;!--[if gte IE 8]&gt; Internet Explorer 8 or greater &lt;![endif]--&gt;<br>
+              &lt;!--[if gte IE 9]&gt; Internet Explorer 9 or greater &lt;![endif]--&gt;
+
+            </code>
+
+            <br><br>
+
+            <p>To style for all applicable versions of IE (6 - 9), use the following.</p>
+            <code>
+              &lt;!--[if IE]&gt; Internet Explorer 6 - 9 &lt;![endif]--&gt;
+            </code>
+
+          </section>
+
+        </div>
+    </div>
+
+    <div class="info">
+      <h2>Information <small>About this lesson</small></h2>
+      <h3>What are we making?</h3>
+      <p>Fun &amp; fancy ways to manipulate Internet Explorer to our will!</p>
+
+      <h3>Where can I use it?</h3>
+      <p>In your websites, client projects and applications as a way to get around those pesky Internet Explorer bugs!</p>
+
+      <h3>How compatible are these styles with major browsers?</h3>
+      <p>Check the CSS3 styles from your stylesheet <a href="http://caniuse.com/">on this website.</a> It allows you to see the compatibility of every CSS style with major browser.</p>
+    </div>
+
+    <footer>
+      <div class="logo">
+        <a href="http://codecollege.ca/" id="logo">
+
+          <img src="../_theme-styles/img/bggray.svg" width="60px" id="logo_bg-gray">
+          <img src="../_theme-styles/img/bgyellow.svg" width="60px" id="logo_bg-yellow">
+          <img src="../_theme-styles/img/codecollegelogo.svg" width="60px" id="logo_codecollege">
+
+          <!-- <img src="../_theme-styles/img/codecollegelogo.png" alt="Learn to Code at CodeCollege.ca" height="60px"> -->
+
+        </a>
+      </div>
+      <div class="made-by">
+        Made by <a href="http://bradhussey.ca/">Brad Hussey</a>
+      </div>
+      <div class="course">
+        <a href="http://codecollege.ca/">Code 30 things in 30 days with CSS3</a>
+      </div>
+      <div class="copyright">
+        &copy;2018 Brightside Studios Inc.
+      </div>
+    </footer>
+  </body>
+</html>
