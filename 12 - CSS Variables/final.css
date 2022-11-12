@@ -1,0 +1,43 @@
+/* ==========================================
+   FINAL.CSS
+   These are the final styles for the project.
+
+   Course:  CSS3 in 30 Days
+   Author:  Brad Hussey
+   Website: codecollege.ca
+   ========================================== */
+
+
+/* =========================
+   CSS VARIABLES
+   ========================= */
+
+/* CSS variables (or custom properties) must be declared within a CSS selector in order to define it's "scope"
+
+Here, the variables are within the .final-result selector, therefore, it's scope is available across all descendants of that selector. If you wanted a global variable across the entire web page, you could use the "body" or ":root" selector. */
+.final-result {
+  --primary-color: orangered;
+  --secondary-color: hotpink;
+  --base-measurement: 20px;
+}
+
+/* Access the variable by using the var() function */
+.final-result .final__box {
+  text-align: center;
+
+  /* This variable is local to the ".final-result .box" selector */
+  --text-color: #f3f3f3;
+  color: var(--text-color);
+
+  background: var(--primary-color);
+  margin:     var(--base-measurement);
+
+  /* You can do math by including the calc() function! */
+  height:       calc( var(--base-measurement) * 10 );
+  width:        calc( var(--base-measurement) * 10 );
+  line-height:  calc( var(--base-measurement) * 10 );
+}
+
+.final-result .final__box2 {
+  background: var(--secondary-color);
+}
