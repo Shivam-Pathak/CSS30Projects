@@ -1,0 +1,34 @@
+/* ==========================================
+   FINAL.CSS
+   These are the final styles for the project.
+
+   Course:  CSS3 in 30 Days
+   Author:  Brad Hussey
+   Website: codecollege.ca
+   ========================================== */
+
+
+/* =========================
+   STICKY FOOTER
+   ========================= */
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.page-content {
+  min-height: 100%;
+
+  /* same measurement as footer */
+  margin-bottom: -120px;
+}
+
+  .page-content::after {
+    content: "";
+    display: block;
+  }
+
+  footer, .page-content::after {
+    height: 120px;
+  }
