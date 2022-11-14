@@ -1,0 +1,44 @@
+/* ==========================================
+   FINAL.CSS
+   These are the final styles for the project.
+
+   Course:  CSS3 in 30 Days
+   Author:  Brad Hussey
+   Website: codecollege.ca
+   ========================================== */
+
+
+/* =========================
+   STICKY HEADER
+   ========================= */
+
+body.sticky-header-lesson {
+  /* same height as sticky header + extra padding */
+  margin-top: 200px;
+}
+
+
+.sticky-header {
+  background: rgba(242,57,90,0.9);
+
+  /* this "fixes" the element in place, wherever you position it */
+  position: fixed;
+  top: 0;
+  height: 180px;
+
+  /* width needs to be 100% when fixed width */
+  width: 100%;
+
+  z-index: 99;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+  .sticky-header h1 {
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+    margin: 0 auto;
+  }
+
+    .sticky-header h1 small {
+      font-size: 2rem;
+    }
