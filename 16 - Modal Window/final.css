@@ -1,0 +1,63 @@
+/* ==========================================
+   FINAL.CSS
+   These are the final styles for the project.
+
+   Course:  CSS3 in 30 Days
+   Author:  Brad Hussey
+   Website: codecollege.ca
+   ========================================== */
+
+
+/* =========================
+   CSS MODALS
+   ========================= */
+    .final__button{
+      cursor: pointer;
+    }
+    .final__overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 99;
+      background-color: #333333;
+      pointer-events: none;
+      opacity: 0;
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+      -webkit-transition: transform 0.5s ease, opacity 0.5s ease;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+    input[type="checkbox"]:checked ~ .final__overlay {
+      pointer-events: auto;
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    .final__modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      z-index: 100;
+      -webkit-transform: translate(-50%, -50%) scale(0.5);
+              transform: translate(-50%, -50%) scale(0.5);
+      width: 100%;
+      max-width: 640px;
+      pointer-events: none;
+      opacity: 0;
+      -webkit-transition: transform 0.5s ease, opacity 0.5s ease;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      transition-delay: 0.1s;
+    }
+    input[type="checkbox"]:checked ~ .final__modal {
+      pointer-events: auto;
+      opacity: 1;
+      -webkit-transform: translate(-50%, -50%) scale(1);
+              transform: translate(-50%, -50%) scale(1);
+    }
+    .final__modal__content {
+      display: block;
+      padding: 30px;
+      background-color: #ffffff;
+    }
