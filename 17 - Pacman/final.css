@@ -1,0 +1,182 @@
+/* ==========================================
+   FINAL.CSS
+   These are the final styles for the project.
+
+   Course:  CSS3 in 30 Days
+   Author:  Brad Hussey
+   Website: codecollege.ca
+   ========================================== */
+
+
+/* =========================
+   PACMAN!
+   ========================= */
+
+   .final__path {
+     position: relative;
+     width: 100%;
+     height: 100px;
+     background: #333;
+     padding: 20px;
+     box-sizing: border-box;
+     overflow: hidden;
+   }
+   .final__path::after {
+       content: "";
+       position: absolute;
+       display: block;
+       border-top: 12px dotted white;
+       color: white;
+       width: 90%;
+       top: 50%;
+       left: 5%;
+       margin-top: -6px;
+     }
+
+   .final__pacman {
+     position: absolute;
+     z-index: 99;
+     top: 50%;
+     left: -20%;
+     animation: final__moveForward 5s linear infinite;
+     animation-delay: 0.8s;
+   }
+
+     .final__pacman::before, .final__pacman::after {
+       content: "";
+       display: block;
+       height: 0;
+       width: 0;
+       position: absolute;
+       border: solid 30px yellow;
+       margin-top: -30px;
+       border-radius: 50%;
+       border-right-color: transparent;
+       border-bottom-color: transparent;
+       animation: final__mouthTop 0.7s ease infinite;
+     }
+
+     .final__pacman::after {
+       border-color: yellow;
+       border-right-color: transparent;
+       border-top-color: transparent;
+       animation: final__mouthBottom 0.7s ease infinite;
+     }
+
+   .final__ghost {
+     position: absolute;
+     z-index: 99;
+     top: 50%;
+     left: 20%;
+     margin-top: -35px;
+     background: red;
+     height: 70px;
+     width: 60px;
+     border-top-left-radius: 70px;
+     border-top-right-radius: 70px;
+     animation: final__moveForward 5s linear infinite, final__colourSwap 0.5s linear infinite;
+   }
+
+     /* using these for eyes */
+     .final__ghost::before, .final__ghost::after {
+       content: "";
+       position: absolute;
+       background: white;
+       height: 25px;
+       width: 20px;
+       border-radius: 100%;
+       top: 15px;
+       left: 4px;
+     }
+
+     .final__ghost::after {
+       left: 28px;
+     }
+
+   .final__eyes::before, .final__eyes::after {
+     content: "";
+     position: absolute;
+     background: blue;
+     height: 10px;
+     width: 10px;
+     border-radius: 100%;
+     top: 25px;
+     left: 5px;
+     z-index: 99;
+     animation: final__peeperLeft 0.7s linear infinite;
+   }
+
+     .final__eyes::after {
+       left: 30px;
+       animation: final__peeperRight 0.7s linear infinite;
+     }
+
+   .final__skirt {
+     position: absolute;
+     height: 0;
+     width: 0;
+     border: solid 10px #333;
+     border-top-color: transparent;
+     bottom: -10px;
+   }
+     .final__skirt::after, .final__skirt::before {
+       content: "";
+       position: absolute;
+       height: 0;
+       width: 0;
+       border: solid 10px #333;
+       border-top-color: transparent;
+       bottom: -10px;
+       left: 10px;
+     }
+     .final__skirt::after {
+       border-color: #333;
+       border-top-color: transparent;
+       bottom: -10px;
+       left: 30px;
+     }
+
+   @keyframes final__moveForward {
+     0% {
+       left: -20%;
+     }
+     100% {
+       left: 100%;
+     }
+   }
+
+   @keyframes final__mouthTop {
+     50% {
+       transform: rotate(44deg);
+     }
+   }
+
+   @keyframes final__mouthBottom {
+     50% {
+       transform: rotate(-44deg);
+     }
+   }
+
+   @keyframes final__peeperLeft {
+     0%, 100% {
+       left: 5px;
+     }
+     50% {
+       left: 10px;
+     }
+   }
+
+   @keyframes final__peeperRight {
+     0%, 100% {
+       left: 30px;
+     }
+     50% {
+       left: 38px;
+     }
+   }
+
+   @keyframes final__colourSwap {
+     50% {
+       background: hotpink;
+     }
+   }
