@@ -1,0 +1,109 @@
+/* ==========================================
+   FINAL.CSS
+   These are the final styles for the project.
+
+   Course:  CSS3 in 30 Days
+   Author:  Brad Hussey
+   Website: codecollege.ca
+   ========================================== */
+
+
+/* =========================
+   TOOLTIPS
+   ========================= */
+   .final__tooltip {
+    position: relative;
+    height: 60px;
+    width: 250px;
+    background: #f2395a;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    font-size: 18px;
+    margin: 0 auto;
+   }
+   .final__tooltip:before {
+     position: absolute;
+     z-index: 2;
+     display: none;
+     width: 200px;
+     max-width: 200px;
+     padding: 10px;
+     font-size: 0.8em;
+     line-height: 1.4;
+     border-radius: 5px;
+     background-color: rgba(0, 0, 0, 0.8);
+     color: white;
+     content: attr(title);
+   }
+   .final__tooltip:after {
+     position: absolute;
+     z-index: 1;
+     display: none;
+     width: 0;
+     height: 0;
+     border: 5px solid transparent;
+     content: "";
+   }
+   .final__tooltip:hover:before,
+   .final__tooltip:hover:after {
+     display: inline-block;
+   }
+
+
+   .final__tooltip.top:before {
+     bottom: calc(100% + 5px);
+     left: 50%;
+
+     /* Why use transform vs. position? There's a great article on that here: https://medium.com/@ArthurFinkler/css-animations-translate-vs-absolute-positioning-and-background-position-dd39fbdeade5 */
+     transform: translateX(-50%);
+   }
+   .final__tooltip.top:after {
+     bottom: 100%;
+     left: 50%;
+     transform: translateX(-50%);
+     border-bottom-width: 0;
+     border-top-color: rgba(0, 0, 0, 0.8);
+   }
+
+
+   .final__tooltip.bottom:before {
+     top: calc(100% + 5px);
+     left: 50%;
+     transform: translateX(-50%);
+   }
+   .final__tooltip.bottom:after {
+     top: 100%;
+     left: 50%;
+     transform: translateX(-50%);
+     border-top-width: 0;
+     border-bottom-color: rgba(0, 0, 0, 0.8);
+   }
+
+
+   .final__tooltip.left:before {
+     top: 50%;
+     right: calc(100% + 5px);
+     transform: translateY(-50%);
+   }
+   .final__tooltip.left:after {
+     top: 50%;
+     right: 100%;
+     transform: translateY(-50%);
+     border-right-width: 0;
+     border-left-color: rgba(0, 0, 0, 0.8);
+   }
+
+
+   .final__tooltip.right:before {
+     top: 50%;
+     left: calc(100% + 5px);
+     transform: translateY(-50%);
+   }
+   .final__tooltip.right:after {
+     top: 50%;
+     left: 100%;
+     transform: translateY(-50%);
+     border-left-width: 0;
+     border-right-color: rgba(0, 0, 0, 0.8);
+   }
