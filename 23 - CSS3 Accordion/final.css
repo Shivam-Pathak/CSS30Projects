@@ -1,0 +1,77 @@
+/* ==========================================
+   FINAL.CSS
+   These are the final styles for the project.
+
+   Course:  CSS3 in 30 Days
+   Author:  Brad Hussey
+   Website: codecollege.ca
+   ========================================== */
+
+
+/* =========================
+   CSS ACCORDION
+   ========================= */
+   .final__accordion {
+      position: relative;
+      display: block;
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+    }
+
+    .final__accordion .accordion__item {
+      display: block;
+    }
+
+    .final__accordion .accordion__content {
+      display: block;
+      padding: 0;
+      overflow: hidden;
+      height: 0;
+      -webkit-transition: height 0.5s ease, padding 0.3s linear;
+      transition: height 0.5s ease, padding 0.3s linear;
+    }
+
+    .final__accordion .accordion__content p {
+      padding: 20px;
+      margin:0;
+    }
+
+    .final__accordion .accordion__content:target {
+      height: 150px;
+    }
+
+    .final__accordion .accordion__trigger {
+      text-decoration: none;
+    }
+
+    .final__accordion .accordion__title {
+      position: relative;
+      display: block;
+      margin: 0;
+      padding: 10px;
+      font-size: 1em;
+      background-color: #00B3B4;
+      color: #FFFFFF;
+      border: 1px solid #379AA4;
+      -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset, 0 4px 0 #338A94, 0 4px 2px rgba(0, 0, 0, .5);
+      -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset, 0 4px 0 #338A94, 0 4px 2px rgba(0, 0, 0, .5);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset, 0 4px 0 #338A94, 0 4px 2px rgba(0, 0, 0, .5);
+      cursor: pointer;
+    }
+
+    .final__accordion .accordion__title:hover {
+      background-color: #0bbfc0;
+    }
+
+    .final__accordion .accordion__title:after {
+      position: absolute;
+      top: calc(50% - 5px);
+      right: 20px;
+      width: 7px;
+      height: 7px;
+      border-left: 2px solid #FFFFFF;
+      border-bottom: 2px solid #FFFFFF;
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      content: "";
+    }
