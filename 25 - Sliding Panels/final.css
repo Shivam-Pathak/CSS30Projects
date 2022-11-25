@@ -1,0 +1,65 @@
+/* ==========================================
+   FINAL.CSS
+   These are the final styles for the project.
+
+   Course:  CSS3 in 30 Days
+   Author:  Brad Hussey
+   Website: codecollege.ca
+   ========================================== */
+
+
+/* =========================
+   SLIDING PANELS
+   ========================= */
+.final__slide{
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+.final__slide img{
+  display: inline-block;
+  vertical-align: middle;
+}
+.final__slide-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0;
+  width:100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding:20px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background-color: rgba(225, 35, 69, 0.9);
+  color: #ffffff;
+  transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+}
+.final__slide:hover .final__slide-content{
+  transform:translate(0, 0);
+  -webkit-transform:translate(0, 0);
+}
+
+/*Directions*/
+.slide-top .final__slide-content{
+  transform:translate(0, -100%);
+  -webkit-transform:translate(0, -100%);
+}
+.slide-left .final__slide-content{
+  transform:translate(-100%, 0);
+  -webkit-transform:translate(-100%, 0);
+}
+.slide-right .final__slide-content{
+  transform:translate(100%, 0);
+  -webkit-transform:translate(100%, 0);
+}
+.slide-bottom .final__slide-content{
+  transform:translate(0, 100%);
+  -webkit-transform:translate(0, 100%);
+}
