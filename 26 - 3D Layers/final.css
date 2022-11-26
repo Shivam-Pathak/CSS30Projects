@@ -1,0 +1,66 @@
+/* ==========================================
+   FINAL.CSS
+   These are the final styles for the project.
+
+   Course:  CSS3 in 30 Days
+   Author:  Brad Hussey
+   Website: codecollege.ca
+   ========================================== */
+
+
+/* =========================
+   3D LAYER EFFECT
+   ========================= */
+
+.final__layers {
+  position: relative;
+  min-height: 638px;
+  max-width: 360px;
+}
+
+.final__layers img {
+  position: absolute;
+  max-width: 100%;
+  height: 100%;
+  transition: all ease 1600ms;
+  transform-style: preserve-3d;
+}
+
+.final__layers:hover img {
+  /*
+  The "perspective" CSS function (or property) enables 3D space and produces the illustion of "distance" between the Z plane and the user.
+
+  Smaller value = exaggerated effect
+  Larger value = subtle effect
+  */
+  transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(35px) translateY(0px) translateZ(180px);
+}
+
+.final__layers img.mid {
+  width: 320px;
+  left: 20px;
+}
+
+.final__layers img.top {
+  width: 300px;
+  left: 30px;
+  top: -5px;
+}
+
+.final__layers img.tippy {
+  width: 280px;
+  top: -150px;
+  left: 40px;
+}
+
+.final__layers:hover img.mid {
+  transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(35px) translateY(0px) translateZ(240px);
+}
+
+.final__layers:hover img.top {
+  transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(35px) translateY(0px) translateZ(280px);
+}
+
+.final__layers:hover img.tippy {
+  transform: perspective(1200px) rotateX(60deg) rotateY(20deg) rotateZ(-25deg) translateX(-20px) translateY(20px) translateZ(260px);
+}
