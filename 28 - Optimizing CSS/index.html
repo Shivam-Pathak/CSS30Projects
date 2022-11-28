@@ -1,0 +1,119 @@
+<!--
+  Message from Brad:
+  Thanks for watching CSS3 in 30 Days! You're awesome.
+  Want more fun design & coding courses? Check out my website.
+
+  https://codecollege.ca
+  (it's free to start)
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Optimizing Your CSS | Code 30 Things in 30 Days with CSS3</title>
+
+    <!-- NORMALIZE CSS -->
+    <link rel="stylesheet" href="../_theme-styles/normalize.css">
+
+    <!-- PROJECT THEME CSS -->
+    <link rel="stylesheet" href="../_theme-styles/theme.css">
+
+    <!-- FINAL PROJECT CSS (use for reference) -->
+    <link rel="stylesheet" href="final.css">
+
+    <!-- SANDBOX CSS (this is your file!) -->
+    <link rel="stylesheet" href="sandbox.css">
+
+<link href="https://fonts.googleapis.com/css?family=Bubblegum+Sans|Nova+Mono|Roboto+Condensed" rel="stylesheet">
+  </head>
+  <body>
+    <h1><small>Day #28</small> Optimizing Your CSS</h1>
+
+
+
+    <div class="final-result">
+        <h2>Final Result <small>Use this for reference!</small></h2>
+        <div class="content">
+
+          <section>
+            <p>Good, clean code is always a great idea. Here are some hot tips on optimizing your CSS:</p>
+            <h3>Code better!</h3>
+            <ol>
+              <li>Do the work right the first time. Don't rely on optimization tools to make you a good CSS3 coder.</li>
+              <li>As one of my favourite sayings goes, <em>"Crap in; Crap out".</em></li>
+              <li>Use shallow selectors instead of long, redundant selectors.</li>
+              <li>Utilize good code organization</li>
+              <li>Use shorthand where possible</li>
+              <li><strong>Treat your CSS like it's your art.</strong></li>
+            </ol>
+
+            <h3>Validate!</h3>
+            <p>Always validate your code! Sometimes the smallest error can cause the biggest headache. There are awesome, free tools out there, such as <a href="http://www.cssportal.com/css-optimize/" target="_blank">this tool here.</a></p>
+
+            <h3>Compress!</h3>
+            <p>When you're developing, you want your CSS to be highly readable and easy to navigate, with comments and spacing. But in a production-ready site (i.e. a live client site, or app), you don't need all of that stuff! Create a production-only CSS file and add your highly-compressed CSS to that file when you launch! Use a free tool website <a href="http://www.cssportal.com/css-optimize/" target="_blank">like this one</a> to compress your CSS.</p>
+            <p>If manually doing this process becomes a pain, use a tool that automatically optimizes & compresses your CSS, and creates a "production" file on your server. <a href="https://codekitapp.com/" target="_blank">I highly suggest CodeKit.</a></p>
+
+            <h3>Pre-load!</h3>
+            <p>Did you know you could tell your browser to "pre-load" your CSS? This could improve performance and ensure your styles load quickly for users. Simply add the following to the <code>&lt;head&gt;</code> tag of your HTML when calling your CSS file:</p>
+            <code>&lt;link rel=&quot;preload&quot; href=&quot;app.css&quot; as=&quot;style&quot;&gt;</code>
+
+
+            <h3>Lighten up your Frameworks!</h3>
+            <p>Frameworks, like Bootstrap, are notoriously "heavy", meaning there are a lot of files, functions, assets and code that you simply do not need in your website. Perhaps you're just using a Framework for the Grid, the Base Styles, or a specific element, like Buttons!</p>
+            <p>If this is the case for you, when you download the Framework, either remove EVERYTHING you're not using, or download the specific files you need to make those resources quicker to load in the browser.</p>
+
+            <h3>Learn a pre-processor language!</h3>
+            Take advantage of a CSS pre-processor, like <a href="https://codecollege.ca/p/learn-sass">Sass</a> or LESS. They'll not only save you coding time and give you more styling flexibility, but you can export highly-optimized CSS for production-ready sites &amp; applications!
+
+            <h3>Some great optimization resources!</h3>
+            <ol>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties" target="_blank">Shorthand Properties - Mozilla</a></li>
+              <li><a href="http://www.cssportal.com/css-optimize/" target="_blank">CSS Optimize</a></li>
+              <li><a href="https://codekitapp.com/" target="_blank">CodeKit</a></li>
+              <li><a href="http://sass-lang.com/" target="_blank">Sass</a></li>
+            </ol>
+
+          </section>
+
+        </div>
+    </div>
+
+    <div class="info">
+      <h2>Information <small>About this lesson</small></h2>
+      <h3>What are we making?</h3>
+      <p>Fun &amp; fancy ways to optimize your CSS3!</p>
+
+      <h3>Where can I use it?</h3>
+      <p>In your websites, client projects and applications to optimize the User Experience and speed up load times!</p>
+
+      <h3>How compatible are these styles with major browsers?</h3>
+      <p>Check the CSS3 styles from your stylesheet <a href="http://caniuse.com/">on this website.</a> It allows you to see the compatibility of every CSS style with major browser.</p>
+
+    </div>
+
+    <footer>
+      <div class="logo">
+        <a href="http://codecollege.ca/" id="logo">
+
+          <img src="../_theme-styles/img/bggray.svg" width="60px" id="logo_bg-gray">
+          <img src="../_theme-styles/img/bgyellow.svg" width="60px" id="logo_bg-yellow">
+          <img src="../_theme-styles/img/codecollegelogo.svg" width="60px" id="logo_codecollege">
+
+          <!-- <img src="../_theme-styles/img/codecollegelogo.png" alt="Learn to Code at CodeCollege.ca" height="60px"> -->
+
+        </a>
+      </div>
+      <div class="made-by">
+        Made by <a href="http://bradhussey.ca/">Brad Hussey</a>
+      </div>
+      <div class="course">
+        <a href="http://codecollege.ca/">Code 30 things in 30 days with CSS3</a>
+      </div>
+      <div class="copyright">
+        &copy;2018 Brightside Studios Inc.
+      </div>
+    </footer>
+  </body>
+</html>
