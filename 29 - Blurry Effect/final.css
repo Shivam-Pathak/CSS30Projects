@@ -1,0 +1,35 @@
+/* ==========================================
+   FINAL.CSS
+   These are the final styles for the project.
+
+   Course:  CSS3 in 30 Days
+   Author:  Brad Hussey
+   Website: codecollege.ca
+   ========================================== */
+
+
+/* =========================
+   BLUR EFFECT
+   ========================= */
+   .final__depth-gallery{
+     position: relative;
+     display: inline-block;
+   }
+
+   .final__depth-gallery img{
+     border: 7px solid #FFFFFF;
+     box-shadow: 0 0 5px rgba(0,0,0,0.3);
+     cursor: pointer;
+     transition: filter 0.3s linear, transform 0.3s linear;
+     -webkit-transition: filter 0.3s linear, transform 0.3s linear;
+   }
+
+   .final__depth-gallery:hover img{
+     filter: blur(5px);
+     transform: scale(0.9);
+   }
+
+   .final__depth-gallery img:hover{
+     filter: blur(0);
+     transform: scale(1.1);
+   }
